@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function uploadFile(x) {
-  console.log(x.name);
-  fetch('upics',{method: "POST", body: x}).then(x => x.text()).then(x => console.log(x));
+  fetch('/upics',{method: "POST", body: x}) // 
 }
 
 class App extends Component {

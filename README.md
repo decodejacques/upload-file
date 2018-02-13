@@ -1,0 +1,1 @@
+The only files of interest are `frontend/src/App.js` and `frontend/package.json` and `backend/server.js`
