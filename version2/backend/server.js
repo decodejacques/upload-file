@@ -9,7 +9,7 @@ app.use(express.static('images'))
 
 app.post('/upics', (req, res) => {
     var extension = req.query.ext.split('.').pop();
-    var randomString = '' +  Math.floor(Math.random() * 100)
+    var randomString = '' +  Math.floor(Math.random() * 10000000)
     var randomFilename = randomString + '.' + extension
     fs.writeFileSync('images/' +  randomFilename, req.body);
     res.send(randomFilename)

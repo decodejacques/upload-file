@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var fs = require('fs');
 var bodyParser = require('body-parser')
-app.use(bodyParser.raw({ type: '*/*' }))
+app.use(bodyParser.raw({ type: '*/*', limit: '50mb' }))
 
 app.post('/upics', (req, res) => {
     fs.writeFileSync('foo.jpg', req.body);
